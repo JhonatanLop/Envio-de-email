@@ -4,7 +4,8 @@ import smtplib
 
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-# Importando informações como porta, email do remetente e destinatário, login e senha
+
+# Importando informações da base de dados
 from bd import senha, port as porta, host as hospedagem, login as remetente, to as destinatario, nome
 
 # S M T P - Simple Mail Transfere Protocol
