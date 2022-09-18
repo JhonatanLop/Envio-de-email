@@ -31,19 +31,22 @@ server.starttls()
 server.login(login, password)
 
     #CORPO DE EMAIL TIPO MIME
-corpo = """ olá, tudo bem?
-            segue abaixo seus dados para acessar nossa plataforma de avaliação
-
-            email: 
+corpo = f'''
+            Olá, {nome}!
+            segue abaixo seus dados para acessar nossa plataforma
+            email: {to}
             senha: 
 
-            este é uma email automático, favor não responder :)"""
+            não compartilhe sua senha com ninguêm!
+
+            este é uma email automático, favor não responder :)
+            '''
 
 # Codifica a mensagem do email em tipo MIME
 email_msg = MIMEMultipart()
 email_msg ['From'] = login
 email_msg ['To'] = to
-email_msg ['Subject'] = "teste"
+email_msg ['Subject'] = "E-mail automático - Dados para acesso da plataforma"
 email_msg.attach(MIMEText(corpo, 'Plain'))
 
 # Envia o email tipo MIME no SERVIDOR SMTP
