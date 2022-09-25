@@ -1,14 +1,14 @@
 # Envio-de-email
 Programa para envio de email
 
-### OBJETIVO:
+# OBJETIVO:
 Foi criado com o propósito de enviar senhas pré definidas à usuários que foram cadastrado em um sistema.
 
 Este código em específico foi desenvolvido com uma necessidade que surgiu em um projeto de faculdade. onde um instrutor irá cadastrar várias pessoas com senhas autogeradas e com um email fornecido pelo usuário. 
 
 Com o email fornecido, a senha criada, o código tem a função de informar ao futuro usuário da palaforma os seus dados para login.
 
-### COMO FUNCIONA?
+# COMO FUNCIONA?
 O código é bem simples.
 De início, crio ele com uma função usando o método "def funcao()" para que posa ser importado e usado em um sistema mais complexo.
 
@@ -21,11 +21,11 @@ port - é a porta de acesso
 login - é o endereço de email de onde a mensagem vai ser enviada
 password - é a senha de máquina para que o computador acesse o email.
 
-# Possíveis problemas
+### Possíveis problemas
 Para que o código consiga se conectar com o endereço de email, é importante fazer algumas configurações antes. 
 Habilitar acesso de apps menos seguras era uma delas até o google tirar esse recurso. agora o processo é um pouco diferente. Você deve entrar nas configurações do email e habilitar uma senha de máquina. Ao criar uma senha de máquina, ela deve atribuida à variável "password" ao invés da senha do email.
 
-# Continuando...
+#### Continuando...
 
 "server = smtplib.SMTP(host, port)" cria uma conexão com o servidor, utilizando o endereço e a porta.
 
@@ -39,7 +39,7 @@ No corpo, é escrito em formato HTML oque você deseja mandar para outra pessoa
 
 Da linha 43 até 48, ocorre uma incriptação da mensagem o email em tipo MIME
 
-# para quem vai ser enviado?
+### para quem vai ser enviado?
 
 Para configurar o destinatário da mensagem usamos "email_msg ['To'] = to" onde "to" em minusculo, estará o endereço de email do destinatário.
 
